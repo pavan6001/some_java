@@ -5,7 +5,7 @@ pipeline {
           steps {
               echo 'Running build automation'
               withAnt(installation: 'Ant') {
-                    ant jar
+                    sh "ant build"
                     }
 
               archiveArtifacts artifacts: 'target/*.jar'

@@ -4,8 +4,10 @@ pipeline {
         stage('Build') {
           steps {
               echo 'Running build automation'
-              sh 'ant clean '
-              sh 'ant jar'
+              withAnt(installation: 'Ant') {
+                    ant jar
+                    }
+
               archiveArtifacts artifacts: 'target/*.jar'
               }
             }

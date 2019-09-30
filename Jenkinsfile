@@ -8,7 +8,7 @@ pipeline {
                     sh "ant jar"
                     }
 
-              archiveArtifacts artifacts: 'target/*.jar'
+              archiveArtifacts artifacts: '*/*.jar'
               }
             }
           }

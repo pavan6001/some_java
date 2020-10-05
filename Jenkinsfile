@@ -11,7 +11,7 @@ pipeline {
                     sh "ant jar"
                    
 
-              #archiveArtifacts artifacts: '*/*.jar'
+              //archiveArtifacts artifacts: '*/*.jar'
               }
           }
 }

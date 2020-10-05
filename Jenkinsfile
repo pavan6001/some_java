@@ -3,7 +3,7 @@ pipeline {
     tools {
 	  ant 'ANT'
 	}
-    
+stages { 
     stage('Build') {
           steps {
               echo 'Running build automation'
@@ -14,6 +14,6 @@ pipeline {
               //archiveArtifacts artifacts: '*/*.jar'
               }
           }
+     }
 }
-        
          

@@ -1,16 +1,19 @@
 pipeline {
     agent any 
-    stages {
-        stage('Build') {
+    tools {
+	  ant 'ANT'
+	}
+    
+    stage('Build') {
           steps {
               echo 'Running build automation'
-              withAnt(installation: 'Ant') {
+              
                     sh "ant jar"
-                    }
+                   
 
-              archiveArtifacts artifacts: '*/*.jar'
+              #archiveArtifacts artifacts: '*/*.jar'
               }
-            }
           }
-         }
+}
+        
          

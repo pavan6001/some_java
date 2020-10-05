@@ -8,7 +8,7 @@ stages {
           steps {
               echo 'Running build automation'
               
-                    sh "ant jar"
+                    sh 'ant jar'
                    
 
               //archiveArtifacts artifacts: '*/*.jar'

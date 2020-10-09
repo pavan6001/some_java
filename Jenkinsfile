@@ -7,6 +7,6 @@ node {
 	 }
 	
 	stage('Ant Build') {
-		sh "/bin/${ant} clean build compile jar"
+		sh "/bin/${anthome} clean build compile jar"
 	}
 }

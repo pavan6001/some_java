@@ -1,8 +1,5 @@
 pipeline {
     agent any 
-    tools {
-	  ant 'ANT'
-	}
 stages { 
     stage('Build') {
           steps {

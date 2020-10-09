@@ -7,8 +7,8 @@ stages {
     stage('Build') {
           steps {
               echo 'Running build automation'
-              
-                    sh 'ant clean compile jar run'
+              def anthome = tool name: 'ANT', type: 'ant'
+		  sh "${anyhome}/bin clean compile jar run"
                    
 
               //archiveArtifacts artifacts: '*/*.jar'

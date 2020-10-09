@@ -1,5 +1,5 @@
 node {
-   def anthome = tool name: 'ANT', type: 'ant' + '/bin/ant'
+   def anthome = tool name: 'ANT', type: 'ant' 
 	stage('SCM Checkout') {
 	   git branch: 'master',
 	   credentialsId: 'Github credentials',
@@ -7,6 +7,6 @@ node {
 	 }
 	
 	stage('Ant Build') {
-		sh "${ant} clean build compile jar"
+		sh "/bin/${ant} clean build compile jar"
 	}
 }
